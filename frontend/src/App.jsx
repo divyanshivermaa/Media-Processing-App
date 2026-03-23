@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8001/process";
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://media-processing-app-production.up.railway.app/process";
 const EXAMPLE_URLS = ["https://samplelib.com/lib/preview/mp4/sample-15s.mp4"];
 
 const operationOptions = [

@@ -65,7 +65,11 @@ allowed_origins = os.environ.get("ALLOWED_ORIGINS")
 if allowed_origins:
     origins = [origin.strip() for origin in allowed_origins.split(",") if origin.strip()]
 else:
-    origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
+    origins = [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://mediaprocessing.up.railway.app",
+    ]
 
 app.add_middleware(
     CORSMiddleware,
