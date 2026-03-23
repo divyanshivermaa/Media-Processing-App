@@ -1,0 +1,12 @@
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/temp/
+backend/tmp/
+backend/tmp2/
+backend/outputs/
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+Thumbs.db
+*.log
