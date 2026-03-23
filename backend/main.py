@@ -62,6 +62,7 @@ class ProcessResponse(BaseModel):
 app = FastAPI(title="Media Processing App API")
 
 allowed_origins = os.environ.get("ALLOWED_ORIGINS")
+allow_origin_regex = os.environ.get("ALLOW_ORIGIN_REGEX")
 if allowed_origins:
     origins = [origin.strip() for origin in allowed_origins.split(",") if origin.strip()]
 else:
@@ -71,9 +72,13 @@ else:
         "https://mediaprocessing.up.railway.app",
     ]
 
+if not allow_origin_regex:
+    allow_origin_regex = r"^https://.*\.up\.railway\.app$"
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
+    allow_origin_regex=allow_origin_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
