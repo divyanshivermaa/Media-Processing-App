@@ -55,6 +55,3 @@ https://samplelib.com/lib/preview/mp4/sample-5s.mp4
 License
 MIT
 
-
-
-If you want a shorter README or a more portfolio‑style one, I can rewrite i
